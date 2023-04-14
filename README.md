@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Charles GAMLIGO</h1>
 <h3 align="center">As a technology and design enthusiast, I am a self-taught developer who uses my knowledge and skills to achieve optimal results for both myself and those around me. My enthusiasm for the field drives me to constantly improve and innovate, and I am committed to using my abilities to positively impact the projects I work on.</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=mawena&label=Profile%20views&color=0e75b6&style=flat" alt="mawena" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=mawena&label=Profile%20views&color=0e75b6&style=flat" alt="mawena" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=mawena" alt="mawena" /></a> </p>
 
