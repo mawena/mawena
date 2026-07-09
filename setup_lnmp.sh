@@ -16,29 +16,26 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-# Vérification des privilèges root pour lancer le script
+# Vérification des privilèges root
 if [ "$EUID" -ne 0 ]; then
     echo -e "${RED}Erreur : Ce script doit être exécuté en tant que root (sudo).${NC}"
     exit 1
 fi
 
-# Récupération de l'utilisateur non-root réel qui a lancé le sudo
+# Récupération de l'utilisateur non-root réel
 REAL_USER=${SUDO_USER:-$(logname 2>/dev/null || echo $USER)}
 if [ "$REAL_USER" = "root" ]; then
-    # Essayer de trouver un utilisateur standard si exécuté directement en root
     REAL_USER=$(awk -F: '$3>=1000 && $1!="nobody" {print $1; exit}' /etc/passwd)
 fi
 
-# Initialiser le registre d'applications s'il n'existe pas
+# Initialiser le registre d'applications
 touch "$APPS_REGISTRY"
-
-# ==============================================================================
-# FONCTIONS D'INSTALLATION ET DE REPRISE
-# ==============================================================================
 
 get_state() {
     if [ -f "$STATE_FILE" ]; then
-        cat "$STATE_FILE"
+        local val=$(cat "$STATE_FILE" | tr -d '[:space:]')
+        # Vérifie si c'est bien un nombre, sinon retourne 0
+        [[ "$val" =~ ^[0-7]$ ]] && echo "$val" || echo "0"
     else
         echo "0"
     fi
@@ -48,12 +45,15 @@ set_state() {
     echo "$1" > "$STATE_FILE"
 }
 
+# ==============================================================================
+# FONCTIONS D'INSTALLATION ET DE REPRISE
+# ==============================================================================
 install_lnmp() {
     local current_step=$(get_state)
     
     echo -e "${BLUE}=== Début de l'installation de la pile LNMP ===${NC}"
 
-    # Étape 1 : Système & ACL (Règle l'erreur du setfacl)
+    # Étape 1 : Système & ACL
     if [ "$current_step" -le 1 ]; then
         echo -e "${YELLOW}[1/7] Mise à jour du système et installation de 'acl'...${NC}"
         apt-get update -y && apt-get upgrade -y
@@ -114,7 +114,6 @@ install_lnmp() {
         find /var/www/html -type d -exec chmod g+s {} \;
         chmod -R 775 /var/www/html
         
-        # Application des ACLs (Maintenant fonctionnel car le paquet 'acl' est installé à l'étape 1)
         setfacl -R -d -m g:webdev:rwx /var/www/html
         setfacl -R -d -m u:www-data:rwx /var/www/html
         set_state 6
@@ -126,13 +125,11 @@ install_lnmp() {
         local initial_app_path="/var/www/html/Mawena/Flixger/public"
         mkdir -p "$initial_app_path"
         
-        # Création d'un index de test
         if [ ! -f "$initial_app_path/index.php" ]; then
             echo "<?php echo 'Bienvenue sur Mawena Cloud !'; ?>" > "$initial_app_path/index.php"
             chown www-data:webdev "$initial_app_path/index.php"
         fi
 
-        # Génération du VirtualHost demandé
         cat > /etc/nginx/sites-available/example << 'EOF'
 server {
     listen 80;
@@ -169,6 +166,8 @@ EOF
         fi
         [ -f /etc/nginx/sites-enabled/default ] && rm /etc/nginx/sites-enabled/default
         
+        # Éviter les doublons dans le registre
+        sed -i '/^example:/d' "$APPS_REGISTRY"
         echo "example:.mawena.cloud:/var/www/html/Mawena/Flixger/public" >> "$APPS_REGISTRY"
         
         systemctl restart nginx
@@ -176,18 +175,17 @@ EOF
     fi
 
     echo -e "${GREEN}=== LNMP Installée et configurée avec succès ! ===${NC}"
-    echo -e "${YELLOW}Note : Si votre utilisateur distant vient d'être créé, reconnectez votre SSH pour appliquer le groupe 'webdev'.${NC}"
 }
 
 # ==============================================================================
 # FONCTIONS DE GESTION DES APPLICATIONS WEB
 # ==============================================================================
-
 add_web_app() {
     echo -e "${BLUE}=== Ajouter une nouvelle application Web ===${NC}"
     read -p "Entrez le nom d'identification unique de l'app (ex: api-prod) : " app_id
     app_id=$(echo "$app_id" | tr -d ' ')
     
+    if [ -z "$app_id" ]; then return; fi
     if [ -f "/etc/nginx/sites-available/$app_id" ]; then
         echo -e "${RED}Erreur : Une application avec l'identifiant '$app_id' existe déjà.${NC}"
         return
@@ -196,11 +194,9 @@ add_web_app() {
     read -p "Entrez le nom de domaine complet (ex: app.mawena.cloud) : " domain_name
     read -p "Entrez le chemin absolu du dossier racine web (ex: /var/www/html/MonProjet/public) : " app_path
 
-    # Nettoyage et création du dossier
     mkdir -p "$app_path"
     chown -R www-data:webdev "$app_path"
 
-    # Création du fichier Nginx
     cat > /etc/nginx/sites-available/"$app_id" << EOF
 server {
     listen 80;
@@ -236,11 +232,9 @@ EOF
     ln -s /etc/nginx/sites-available/"$app_id" /etc/nginx/sites-enabled/
     nginx -t && systemctl restart nginx
     
-    # Enregistrement dans la liste locale
     echo "$app_id:$domain_name:$app_path" >> "$APPS_REGISTRY"
-    echo -e "${GREEN}Application '$app_id' configurée avec succès pour $domain_name.${NC}"
+    echo -e "${GREEN}Application '$app_id' configurée avec succès.${NC}"
 
-    # Proposition SSL directe
     read -p "Voulez-vous générer immédiatement un certificat SSL Let's Encrypt ? (y/n) : " gen_ssl
     if [[ "$gen_ssl" =~ ^[Yy]$ ]]; then
         add_ssl_cert "$app_id"
@@ -271,21 +265,13 @@ delete_web_app() {
         return
     fi
 
-    # Nettoyage Nginx
     rm -f /etc/nginx/sites-enabled/"$target_id"
     rm -f /etc/nginx/sites-available/"$target_id"
-    
-    # Retrait du registre
     sed -i "/^$target_id:/d" "$APPS_REGISTRY"
     
     systemctl restart nginx
-    echo -e "${GREEN}Application '$target_id' retirée des configurations Nginx.${NC}"
-    echo -e "${YELLOW}Note : Les fichiers physiques dans /var/www/ n'ont pas été supprimés par sécurité.${NC}"
+    echo -e "${GREEN}Application '$target_id' retirée de Nginx.${NC}"
 }
-
-# ==============================================================================
-# FONCTIONS GESTION DES CERTIFICATS SSL (CERTBOT)
-# ==============================================================================
 
 add_ssl_cert() {
     local target_id=$1
@@ -298,7 +284,7 @@ add_ssl_cert() {
 
     local domain=$(grep "^$target_id:" "$APPS_REGISTRY" | cut -d: -f2)
     if [ -z "$domain" ]; then
-        echo -e "${RED}Application introuvable ou invalide.${NC}"
+        echo -e "${RED}Application introuvable.${NC}"
         return
     fi
 
@@ -306,9 +292,9 @@ add_ssl_cert() {
     certbot --nginx -d "$domain" --redirect --agree-tos --non-interactive --register-unsafely-without-email
 
     if [ $? -eq 0 ]; then
-        echo -e "${GREEN}Certificat SSL activé avec succès pour $domain ! Envoi HTTPS forcé activé.${NC}"
+        echo -e "${GREEN}Certificat SSL activé avec succès pour $domain !${NC}"
     else
-        echo -e "${RED}Erreur lors de la génération du certificat. Vérifiez vos pointages DNS.${NC}"
+        echo -e "${RED}Erreur Certbot. Vérifiez vos pointages DNS pour $domain.${NC}"
     fi
 }
 
@@ -326,57 +312,48 @@ remove_ssl_cert() {
 
     echo -e "${YELLOW}Suppression du certificat pour $domain...${NC}"
     certbot delete --cert-name "$domain"
-    
-    echo -e "${YELLOW}Restauration de la configuration HTTP standard pour $target_id...${NC}"
-    # Note : Après une suppression sauvage de certbot, il faut s'assurer que Nginx n'écoute plus sur le port 443 manquant
-    echo -e "${GREEN}Le certificat a été retiré. Veuillez inspecter /etc/nginx/sites-available/$target_id pour ajuster les blocs d'écoute.${NC}"
+    echo -e "${GREEN}Le certificat a été retiré de Certbot. Veuillez réajuster le fichier de config si nécessaire.${NC}"
     systemctl restart nginx
 }
 
-# ==============================================================================
-# DESINSTALLATION
-# ==============================================================================
-
 uninstall_lnmp() {
     echo -e "${RED}=== DÉSINSTALLATION COMPLÈTE LNMP ===${NC}"
-    read -p "Êtes-vous absolument sûr de vouloir tout supprimer (Nginx, MariaDB, PHP, Configurations) ? (y/n) : " confirm
+    read -p "Êtes-vous absolument sûr de vouloir tout supprimer ? (y/n) : " confirm
     if [[ "$confirm" =~ ^[Yy]$ ]]; then
         systemctl stop nginx mariadb php8.3-fpm || true
         apt-get purge -y nginx mariadb-server mariadb-client php8.3* certbot python3-certbot-nginx acl
         apt-get autoremove -y
         rm -f "$STATE_FILE" "$APPS_REGISTRY"
         rm -rf /etc/nginx
-        echo -e "${GREEN}Le serveur a été nettoyé de la pile LNMP.${NC}"
-    else
-        echo "Désinstallation annulée."
+        echo -e "${GREEN}Le serveur a été nettoyé.${NC}"
+        exit 0
     fi
 }
 
 # ==============================================================================
-# INTERFACE MENU PRINCIPAL
+# INTERFACE MENU PRINCIPAL (BOUCLE COMPATIBLE SANS RECURSION)
 # ==============================================================================
-
-show_menu() {
+while true; do
     clear
     echo -e "${BLUE}=====================================================${NC}"
     echo -e "${GREEN}             GESTIONNAIRE LNMP AUTOMATIQUE            ${NC}"
     echo -e "${BLUE}=====================================================${NC}"
     
-    local state=$(get_state)
+    state=$(get_state)
     if [ "$state" -gt 0 ] && [ "$state" -lt 7 ]; then
-        echo -e "${YELLOW}   [!] Une installation précédente a coupé à l'étape $state/7.${NC}"
-        echo -e "${YELLOW}       L'option 1 reprendra là où elle s'est arrêtée.${NC}"
+        echo -e "${YELLOW}   [!] Installation interrompue à l'étape $state/7.${NC}"
+        echo -e "${YELLOW}       L'option 1 reprendra le processus à cette étape.${NC}"
         echo -e "${BLUE}=====================================================${NC}"
     fi
 
-    echo -e " 1 - Installer / Reprendre l'installation LNMP"
-    echo -e " 2 - Lister les applications web"
-    echo -e " 3 - Ajouter une application web"
-    echo -e " 4 - Supprimer des applications web"
-    echo -e " 5 - Ajouter un certificat SSL à une application"
-    echo -e " 6 - Retirer un certificat SSL à une application"
-    echo -e " 7 - Désinstaller complètement LNMP"
-    echo -e " 0 - Quitter"
+    echo " 1 - Installer / Reprendre l'installation LNMP"
+    echo " 2 - Lister les applications web"
+    echo " 3 - Ajouter une application web"
+    echo " 4 - Supprimer des applications web"
+    echo " 5 - Ajouter un certificat SSL à une application"
+    echo " 6 - Retirer un certificat SSL à une application"
+    echo " 7 - Désinstaller complètement LNMP"
+    echo " 0 - Quitter"
     echo -e "${BLUE}=====================================================${NC}"
     read -p "Choisissez une option [0-7] : " choice
 
@@ -388,14 +365,10 @@ show_menu() {
         5) add_ssl_cert ;;
         6) remove_ssl_cert ;;
         7) uninstall_lnmp ;;
-        0) exit 0 ;;
+        0) echo "Au revoir !"; exit 0 ;;
         *) echo -e "${RED}Option invalide.${NC}" ;;
     esac
     
-    echo -e "\nAppuyez sur une touche pour revenir au menu..."
-    read -n 1
-    show_menu
-}
-
-# Lancement du menu interactif
-show_menu
+    echo -e "\nAppuyez sur [ENTRÉE] pour revenir au menu..."
+    read
+done
