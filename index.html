@@ -589,6 +589,97 @@
       border-radius: 7px;
     }
 
+    /* ---------- Tech lab (projets techniques) ---------- */
+    .tech-head {
+      margin: 64px 0 28px;
+      max-width: 640px;
+    }
+
+    .tech-head h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .tech-head p {
+      color: var(--text-mute);
+      font-size: 0.92rem;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .tech-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color .2s ease, transform .2s ease;
+    }
+
+    .tech-card:hover {
+      border-color: var(--accent-border);
+      transform: translateY(-3px);
+    }
+
+    .tech-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .tech-card h4 {
+      font-family: var(--mono);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .tech-card h4 a:hover {
+      color: var(--accent);
+    }
+
+    .tech-type {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      color: var(--text-mute);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .tech-card p {
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      flex: 1;
+    }
+
+    .tech-cmd {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      color: var(--accent);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 11px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .tech-cmd::before {
+      content: "$ ";
+      color: var(--text-mute);
+    }
+
     /* ---------- Stack ---------- */
     .stack-grid {
       display: grid;
@@ -787,7 +878,8 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .stack-grid {
+      .stack-grid,
+      .tech-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -835,7 +927,8 @@
 
       .cards,
       .projects,
-      .steps {
+      .steps,
+      .tech-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1053,18 +1146,19 @@
         <div class="projects">
           <article class="project featured reveal">
             <div class="project-top">
-              <h3>DocaDoc</h3>
+              <h3>Mawdoc</h3>
               <span class="project-type">Automatisation métier</span>
             </div>
             <p>
-              Fini la production manuelle de documents. À partir d'un simple fichier Excel, DocaDoc génère
+              Fini la production manuelle de documents. À partir d'un simple fichier Excel, Mawdoc génère
               des centaines de contrats, attestations ou factures en un clic — ce qui prenait des jours se fait
-              en quelques minutes. Traitement fiable en arrière-plan, avec suivi en temps réel et reprise
-              automatique en cas d'erreur : rien ne se perd, personne ne surveille.
+              en quelques minutes. S'y ajoutent un hub de conversion de fichiers et des outils documentaires
+              gratuits. Traitement fiable en arrière-plan, avec suivi en temps réel et reprise automatique
+              en cas d'erreur : rien ne se perd, personne ne surveille.
             </p>
             <div class="tags">
-              <span class="tag">Gain de temps</span><span class="tag">Laravel</span><span class="tag">Vue 3</span><span
-                class="tag">Redis Queues</span><span class="tag">Excel</span>
+              <span class="tag">Gain de temps</span><span class="tag">Excel → Word / PDF</span><span
+                class="tag">Laravel</span><span class="tag">Vue 3</span><span class="tag">Redis Queues</span>
             </div>
           </article>
 
@@ -1102,34 +1196,33 @@
 
           <article class="project reveal">
             <div class="project-top">
-              <h3>Maravel</h3>
-              <span class="project-type">Open Source · MIT</span>
+              <h3>Simulateur de prêt</h3>
+              <span class="project-type">Outil financier</span>
             </div>
             <p>
-              Ma librairie Laravel open-source, que je maintiens et fais tourner en production sur mes projets.
-              Concrètement pour vous : une base déjà testée et éprouvée (authentification, rôles &amp; permissions,
-              API), donc un projet <strong>livré plus vite, moins cher en temps de dev et avec beaucoup moins de
-              bugs</strong>. Compatible Laravel 10 → 13.
+              Un outil de simulation de crédit accessible à tous : capacité d'emprunt, comparateur d'offres,
+              échéanciers détaillés et historique des simulations dans un espace personnel. Un sujet complexe
+              — les mathématiques financières — rendu simple et lisible pour l'utilisateur final.
             </p>
             <div class="tags">
-              <span class="tag">Livraison rapide</span><span class="tag">Fiabilité</span><span class="tag">Laravel 10 → 13</span><span
-                class="tag">API REST</span>
+              <span class="tag">Grand public</span><span class="tag">Comparateur</span><span
+                class="tag">Laravel</span><span class="tag">Vue 3</span>
             </div>
           </article>
 
           <article class="project reveal">
             <div class="project-top">
-              <h3>Maravel Template</h3>
-              <span class="project-type">Starter kit</span>
+              <h3>PutTg</h3>
+              <span class="project-type">Gestion de fichiers</span>
             </div>
             <p>
-              Le point de départ prêt à l'emploi de mes projets : authentification, gestion des utilisateurs
-              et des droits déjà en place. Résultat, je démarre votre application en jours, pas en semaines —
-              vous payez de la fonctionnalité, pas de la plomberie technique.
+              Un espace de fichiers en ligne : organisation en dossiers, partage par lien de téléchargement
+              et suivi des accès. Pensé pour distribuer des documents à ses clients ou son équipe sans
+              dépendre d'un service tiers — vos fichiers restent chez vous.
             </p>
             <div class="tags">
-              <span class="tag">Time-to-market</span><span class="tag">Laravel</span><span class="tag">Vue 3</span><span
-                class="tag">Sanctum</span>
+              <span class="tag">Partage simple</span><span class="tag">Laravel</span><span class="tag">Vue 3</span><span
+                class="tag">Vuetify</span>
             </div>
           </article>
 
@@ -1149,6 +1242,75 @@
             </div>
           </article>
 
+        </div>
+
+        <!-- ---- Sous le capot : projets techniques ---- -->
+        <div class="tech-head reveal" id="labo">
+          <span class="kicker">// Sous le capot</span>
+          <h3>Open source &amp; outillage</h3>
+          <p>La partie immergée de l'iceberg : les librairies et outils que je construis, publie et utilise
+            en production. Si vous parlez couramment le terminal, c'est pour vous.</p>
+        </div>
+        <div class="tech-grid">
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/maravel" target="_blank" rel="noopener">maravel</a></h4>
+              <span class="tech-type">lib Laravel · MIT</span>
+            </div>
+            <p>APIController générique avec CRUD complet, RBAC dynamique en base, policies auto-câblées,
+              filtres avancés et générateurs Artisan. Laravel 10 → 13, PHP 8.1 → 8.4.</p>
+            <div class="tech-cmd">composer require mawena/maravel</div>
+          </article>
+
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/maravel-xy" target="_blank" rel="noopener">maravel-xy</a></h4>
+              <span class="tech-type">starter kit · MIT</span>
+            </div>
+            <p>Template Laravel 12 + Vue 3/Vuetify : Sanctum, CRUD utilisateurs, rôles &amp; permissions
+              via Maravel. Le point de départ de mes projets — jours, pas semaines.</p>
+            <div class="tech-cmd">git clone github.com/mawena/maravel-xy</div>
+          </article>
+
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4>lnmp</h4>
+              <span class="tech-type">Bash · Ubuntu</span>
+            </div>
+            <p>Gestionnaire de pile web complet — Nginx, MariaDB, PHP, SSL (Let's Encrypt / mkcert) — en CLI,
+              menu interactif ou panneau web. Distribué via un dépôt APT signé.</p>
+            <div class="tech-cmd">sudo apt install lnmp</div>
+          </article>
+
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4>dnsmasq-webui</h4>
+              <span class="tech-type">paquet Debian</span>
+            </div>
+            <p>Serveur DNS/DHCP de réseau local avec interface web : enregistrements locaux, réservations
+              DHCP, filtrage de domaines façon Pi-hole. MySQL comme source de vérité.</p>
+            <div class="tech-cmd">sudo apt install dnsmasq-webui</div>
+          </article>
+
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4>amazon-mcp</h4>
+              <span class="tech-type">MCP · Python</span>
+            </div>
+            <p>Serveur MCP qui donne à Claude le suivi des prix Amazon : scraping en cascade
+              (requests → curl_cffi → Playwright), historique SQLite, relevés automatiques toutes les 6 h.</p>
+            <div class="tech-cmd">python -m amazon_mcp.server</div>
+          </article>
+
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4>fcx-toolkit</h4>
+              <span class="tech-type">CLI · banking</span>
+            </div>
+            <p>CLI Python pour Oracle Flexcube (core banking) : exécution SQL, exports, intégration de batchs
+              comptables depuis CSV/Excel. Sortie JSON unique, faite pour être scriptée.</p>
+            <div class="tech-cmd">fcx.py commands --json</div>
+          </article>
         </div>
       </div>
     </section>
