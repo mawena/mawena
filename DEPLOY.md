@@ -2,10 +2,15 @@
 
 Site 100% statique : `index.html` + `robots.txt` + `sitemap.xml`. Aucun build, aucune dépendance.
 
+Le reste du dépôt ne part pas sur le serveur : `README.md` est le profil GitHub, `scripts/` et `.github/` génèrent ses cartes de stats, et `.git` ne doit jamais être servi.
+
 ## 1. Copier les fichiers sur le serveur
 
 ```bash
-rsync -avz --delete ./ user@mawena.cloud:/var/www/mawena.cloud/
+rsync -avz --delete \
+  --exclude .git --exclude .github --exclude scripts \
+  --exclude README.md --exclude ROADMAP.md --exclude DEPLOY.md \
+  ./ user@mawena.cloud:/var/www/mawena.cloud/
 ```
 
 ## 2. Config Nginx
