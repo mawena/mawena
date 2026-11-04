@@ -10,6 +10,7 @@ Le reste du dépôt ne part pas sur le serveur : `README.md` est le profil GitHu
 rsync -avz --delete \
   --exclude .git --exclude .github --exclude scripts \
   --exclude README.md --exclude ROADMAP.md --exclude DEPLOY.md \
+  --exclude CHANGELOG.md --exclude VERSION \
   ./ user@mawena.cloud:/var/www/mawena.cloud/
 ```
 

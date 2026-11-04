@@ -27,5 +27,5 @@ Ce dépôt sert deux choses : le README affiché sur https://github.com/mawena e
 ## Phase 4 — Publication
 
 - [x] Fin de la feature, push de `develop`
-- [ ] Release git flow (`main`, `develop`, tag)
+- [x] Release git flow 1.0.0 (`main` réconciliée avec `develop`, tag `v1.0.0`)
 - [ ] Suggestions hors dépôt : bio du profil, dépôts épinglés, branche par défaut
