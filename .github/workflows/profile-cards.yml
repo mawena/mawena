@@ -1,0 +1,51 @@
+name: Profile cards
+
+# Régénère chaque jour les cartes SVG du README et les publie sur la branche
+# `output` (un seul commit, réécrit à chaque fois) : main et develop ne
+# reçoivent jamais de commit de robot.
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [develop, main]
+    paths:
+      - "scripts/profile_cards.py"
+      - ".github/workflows/profile-cards.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: true
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate cards
+        env:
+          # PROFILE_CARDS_TOKEN (facultatif) : jeton personnel en lecture seule
+          # si l'on veut compter davantage que les données publiques.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_CARDS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python3 scripts/profile_cards.py --user "${{ github.repository_owner }}" --out dist
+
+      - name: Publish to the output branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd dist
+          git init -q -b output
+          git config user.name "mawena"
+          git config user.email "gamligocharles@gmail.com"
+          git add -A
+          git commit -q -m "chore: refresh profile cards ($(date -u +%F))"
+          git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
