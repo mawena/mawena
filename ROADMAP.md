@@ -13,7 +13,8 @@ Ce dépôt sert deux choses : le README affiché sur https://github.com/mawena e
 - [x] Script `scripts/profile_cards.py` (Python, bibliothèque standard seule) qui génère des cartes SVG claires et sombres : chiffres clés, langages, activité sur 12 mois
 - [x] Workflow GitHub Actions quotidien qui publie les cartes sur la branche `output` (aucun commit de robot sur `main` ou `develop`)
 - [x] Première génération locale et vérification visuelle (clair et sombre)
-- [ ] Premier passage du workflow sur GitHub Actions
+- [x] Première publication de la branche `output` (faite à la main depuis le poste, le 04/11/2026)
+- [ ] Premier passage du workflow sur GitHub Actions : bloqué, « account is locked due to a billing issue » (régler la facturation du compte, puis relancer avec `gh workflow run profile-cards.yml -R mawena/mawena`)
 
 ## Phase 3 — Nouveau README du profil
 

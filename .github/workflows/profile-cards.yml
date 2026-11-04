@@ -44,8 +44,8 @@ jobs:
         run: |
           cd dist
           git init -q -b output
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "mawena"
+          git config user.email "gamligocharles@gmail.com"
           git add -A
           git commit -q -m "chore: refresh profile cards ($(date -u +%F))"
           git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output

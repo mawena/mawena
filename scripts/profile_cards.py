@@ -54,6 +54,7 @@ query($login: String!, $after: String, $yearFrom: DateTime!, $monthsFrom: DateTi
         contributions { totalCount }
         repository {
           nameWithOwner
+          isPrivate
           languages(first: 20, orderBy: {field: SIZE, direction: DESC}) {
             edges { size node { name } }
           }
@@ -153,12 +154,15 @@ def summarize(user: dict, today: dt.date, hide: set[str]) -> dict:
     year_ago = today - dt.timedelta(days=365)
     active = [r for r in repos if dt.date.fromisoformat(r["pushedAt"][:10]) >= year_ago]
 
-    # Langages pondérés par les commits de l'année : chaque dépôt pèse son
+    # Langages pondérés par les commits de l'année (dépôts publics seulement,
+    # quel que soit le jeton utilisé) : chaque dépôt pèse son
     # nombre de commits, réparti selon la part d'octets de chaque langage.
     # Évite qu'un gros dépôt ancien ou du code compilé écrase le reste.
     weights: dict[str, float] = defaultdict(float)
     commits = 0
-    for item in user["lastYear"]["commitContributionsByRepository"]:
+    public = [i for i in user["lastYear"]["commitContributionsByRepository"]
+              if not i["repository"]["isPrivate"]]
+    for item in public:
         edges = [e for e in item["repository"]["languages"]["edges"]
                  if e["node"]["name"] not in hide]
         size = sum(e["size"] for e in edges)
@@ -201,7 +205,7 @@ def summarize(user: dict, today: dt.date, hide: set[str]) -> dict:
         "followers": user["followers"]["totalCount"],
         "languages": top,
         "lang_commits": commits,
-        "lang_repos": len(user["lastYear"]["commitContributionsByRepository"]),
+        "lang_repos": len(public),
         "hidden": sorted(hide),
         "months": months,
         "today": today,
