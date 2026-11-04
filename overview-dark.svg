@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="210" viewBox="0 0 840 210" role="img" aria-labelledby="t d">
+<title id="t">Charles · @mawena</title>
+<desc id="d">contributions, last 12 months: 2,708; contributions in 2026: 2,615; current streak: 14 d; longest streak, 12 months: 14 d; public repos pushed in 12 months, of 25: 19; stars earned: 11</desc>
+<style>
+text { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; }
+.h { font-size: 15px; font-weight: 600; fill: #f0f6fc; }
+.s { font-size: 12px; fill: #9198a1; }
+.v { font-size: 24px; font-weight: 600; fill: #f0f6fc; }
+.l { font-size: 12px; fill: #9198a1; }
+.n { font-size: 12px; fill: #f0f6fc; }
+.a { font-size: 11px; fill: #9198a1; font-variant-numeric: tabular-nums; }
+</style>
+<rect x="0.5" y="0.5" width="839" height="209" rx="8" fill="#0d1117" stroke="#3d444d"/>
+<text class="h" x="20" y="32">Charles · @mawena</text>
+<text class="s" x="20" y="51">Public profile data · on GitHub since 2019 · updated 2026-11-04</text>
+<text class="v" x="20" y="100">2,708</text>
+<text class="l" x="20" y="120">contributions, last 12 months</text>
+<text class="v" x="286" y="100">2,615</text>
+<text class="l" x="286" y="120">contributions in 2026</text>
+<text class="v" x="552" y="100">14 d</text>
+<text class="l" x="552" y="120">current streak</text>
+<text class="v" x="20" y="164">14 d</text>
+<text class="l" x="20" y="184">longest streak, 12 months</text>
+<text class="v" x="286" y="164">19</text>
+<text class="l" x="286" y="184">public repos pushed in 12 months, of 25</text>
+<text class="v" x="552" y="164">11</text>
+<text class="l" x="552" y="184">stars earned</text>
+</svg>

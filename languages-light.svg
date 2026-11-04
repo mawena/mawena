@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="294" viewBox="0 0 410 294" role="img" aria-labelledby="t d">
+<title id="t">Languages</title>
+<desc id="d">C: 15.4%; Kotlin: 15.0%; Rust: 14.1%; Python: 13.5%; Dart: 11.5%; HTML: 8.8%; PHP: 7.9%; Other: 13.7%</desc>
+<style>
+text { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; }
+.h { font-size: 15px; font-weight: 600; fill: #1f2328; }
+.s { font-size: 12px; fill: #59636e; }
+.v { font-size: 24px; font-weight: 600; fill: #1f2328; }
+.l { font-size: 12px; fill: #59636e; }
+.n { font-size: 12px; fill: #1f2328; }
+.a { font-size: 11px; fill: #59636e; font-variant-numeric: tabular-nums; }
+</style>
+<rect x="0.5" y="0.5" width="409" height="293" rx="8" fill="#ffffff" stroke="#d1d9e0"/>
+<text class="h" x="20" y="32">Languages</text>
+<text class="s" x="20" y="51">Weighted by 1,145 commits, last 12 months</text>
+<text class="n" x="20" y="86">C</text>
+<path d="M112,76 h230.0 a4.0,4.0 0 0 1 4.0,4.0 v4.0 a4.0,4.0 0 0 1 -4.0,4.0 h-230.0 z" fill="#1a7f37"/>
+<text class="a" x="352.0" y="86">15.4%</text>
+<text class="n" x="20" y="112">Kotlin</text>
+<path d="M112,102 h223.4 a4.0,4.0 0 0 1 4.0,4.0 v4.0 a4.0,4.0 0 0 1 -4.0,4.0 h-223.4 z" fill="#1a7f37"/>
+<text class="a" x="345.4" y="112">15.0%</text>
+<text class="n" x="20" y="138">Rust</text>
+<path d="M112,128 h209.8 a4.0,4.0 0 0 1 4.0,4.0 v4.0 a4.0,4.0 0 0 1 -4.0,4.0 h-209.8 z" fill="#1a7f37"/>
+<text class="a" x="331.8" y="138">14.1%</text>
+<text class="n" x="20" y="164">Python</text>
+<path d="M112,154 h201.5 a4.0,4.0 0 0 1 4.0,4.0 v4.0 a4.0,4.0 0 0 1 -4.0,4.0 h-201.5 z" fill="#1a7f37"/>
+<text class="a" x="323.5" y="164">13.5%</text>
+<text class="n" x="20" y="190">Dart</text>
+<path d="M112,180 h170.8 a4.0,4.0 0 0 1 4.0,4.0 v4.0 a4.0,4.0 0 0 1 -4.0,4.0 h-170.8 z" fill="#1a7f37"/>
+<text class="a" x="292.8" y="190">11.5%</text>
+<text class="n" x="20" y="216">HTML</text>
+<path d="M112,206 h129.5 a4.0,4.0 0 0 1 4.0,4.0 v4.0 a4.0,4.0 0 0 1 -4.0,4.0 h-129.5 z" fill="#1a7f37"/>
+<text class="a" x="251.5" y="216">8.8%</text>
+<text class="n" x="20" y="242">PHP</text>
+<path d="M112,232 h116.5 a4.0,4.0 0 0 1 4.0,4.0 v4.0 a4.0,4.0 0 0 1 -4.0,4.0 h-116.5 z" fill="#1a7f37"/>
+<text class="a" x="238.5" y="242">7.9%</text>
+<text class="n" x="20" y="268">Other</text>
+<path d="M112,258 h203.9 a4.0,4.0 0 0 1 4.0,4.0 v4.0 a4.0,4.0 0 0 1 -4.0,4.0 h-203.9 z" fill="#1a7f37"/>
+<text class="a" x="325.9" y="268">13.7%</text>
+<line x1="112" y1="70" x2="112" y2="276" stroke="#d1d9e0"/>
+</svg>

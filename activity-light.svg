@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="290" viewBox="0 0 410 290" role="img" aria-labelledby="t d">
+<title id="t">Activity</title>
+<desc id="d">Dec 2025: 34; Jan 2026: 55; Feb 2026: 78; Mar 2026: 80; Apr 2026: 13; May 2026: 53; Jun 2026: 64; Jul 2026: 282; Aug 2026: 117; Sep 2026: 268; Oct 2026: 1241; Nov 2026: 364</desc>
+<style>
+text { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; }
+.h { font-size: 15px; font-weight: 600; fill: #1f2328; }
+.s { font-size: 12px; fill: #59636e; }
+.v { font-size: 24px; font-weight: 600; fill: #1f2328; }
+.l { font-size: 12px; fill: #59636e; }
+.n { font-size: 12px; fill: #1f2328; }
+.a { font-size: 11px; fill: #59636e; font-variant-numeric: tabular-nums; }
+</style>
+<rect x="0.5" y="0.5" width="409" height="289" rx="8" fill="#ffffff" stroke="#d1d9e0"/>
+<text class="h" x="20" y="32">Activity</text>
+<text class="s" x="20" y="51">Contributions per month, Dec 2025 – Nov 2026 (* month to date)</text>
+<line x1="52" y1="250.0" x2="394" y2="250.0" stroke="#d1d9e0" stroke-width="1"/>
+<text class="a" x="44" y="254.0" text-anchor="end">0</text>
+<line x1="52" y1="194.0" x2="394" y2="194.0" stroke="#d1d9e0" stroke-width="1"/>
+<text class="a" x="44" y="198.0" text-anchor="end">500</text>
+<line x1="52" y1="138.0" x2="394" y2="138.0" stroke="#d1d9e0" stroke-width="1"/>
+<text class="a" x="44" y="142.0" text-anchor="end">1,000</text>
+<line x1="52" y1="82.0" x2="394" y2="82.0" stroke="#d1d9e0" stroke-width="1"/>
+<text class="a" x="44" y="86.0" text-anchor="end">1,500</text>
+<path d="M57.2,250 v-0.0 a3.808,3.808 0 0 1 3.808,-3.808 h10.4 a3.808,3.808 0 0 1 3.808,3.808 v0.0 z" fill="#1a7f37"><title>Dec 2025: 34</title></path>
+<text class="a" x="66.2" y="268" text-anchor="middle">Dec</text>
+<path d="M85.8,250 v-2.2 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v2.2 z" fill="#1a7f37"><title>Jan 2026: 55</title></path>
+<text class="a" x="94.8" y="268" text-anchor="middle">Jan</text>
+<path d="M114.2,250 v-4.7 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v4.7 z" fill="#1a7f37"><title>Feb 2026: 78</title></path>
+<text class="a" x="123.2" y="268" text-anchor="middle">Feb</text>
+<path d="M142.8,250 v-5.0 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v5.0 z" fill="#1a7f37"><title>Mar 2026: 80</title></path>
+<text class="a" x="151.8" y="268" text-anchor="middle">Mar</text>
+<path d="M171.2,250 v-0.0 a1.456,1.456 0 0 1 1.456,-1.456 h15.1 a1.456,1.456 0 0 1 1.456,1.456 v0.0 z" fill="#1a7f37"><title>Apr 2026: 13</title></path>
+<text class="a" x="180.2" y="268" text-anchor="middle">Apr</text>
+<path d="M199.8,250 v-1.9 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v1.9 z" fill="#1a7f37"><title>May 2026: 53</title></path>
+<text class="a" x="208.8" y="268" text-anchor="middle">May</text>
+<path d="M228.2,250 v-3.2 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v3.2 z" fill="#1a7f37"><title>Jun 2026: 64</title></path>
+<text class="a" x="237.2" y="268" text-anchor="middle">Jun</text>
+<path d="M256.8,250 v-27.6 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v27.6 z" fill="#1a7f37"><title>Jul 2026: 282</title></path>
+<text class="a" x="265.8" y="268" text-anchor="middle">Jul</text>
+<path d="M285.2,250 v-9.1 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v9.1 z" fill="#1a7f37"><title>Aug 2026: 117</title></path>
+<text class="a" x="294.2" y="268" text-anchor="middle">Aug</text>
+<path d="M313.8,250 v-26.0 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v26.0 z" fill="#1a7f37"><title>Sep 2026: 268</title></path>
+<text class="a" x="322.8" y="268" text-anchor="middle">Sep</text>
+<path d="M342.2,250 v-135.0 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v135.0 z" fill="#1a7f37"><title>Oct 2026: 1241</title></path>
+<text class="a" x="351.2" y="105.0" text-anchor="middle">1,241</text>
+<text class="a" x="351.2" y="268" text-anchor="middle">Oct</text>
+<path d="M370.8,250 v-36.8 a4.0,4.0 0 0 1 4.0,-4.0 h10.0 a4.0,4.0 0 0 1 4.0,4.0 v36.8 z" fill="#1a7f37"><title>Nov 2026: 364</title></path>
+<text class="a" x="379.8" y="203.2" text-anchor="middle">364</text>
+<text class="a" x="379.8" y="268" text-anchor="middle">Nov*</text>
+</svg>
