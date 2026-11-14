@@ -7,6 +7,26 @@ Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le d
 
 ## [Non publié]
 
+## [1.2.0] - 2026-11-14
+
+### Ajouté
+
+- **Site mawena.cloud mis à jour** : positionnement « fullstack et Linux », ouverture aux postes à distance et aux
+  missions freelance, chiffres clés (plus de 75 releases en 2026, 5 dépôts APT signés, Maravel sur Packagist), six
+  projets vedettes, projets classés par thème (applications Linux, IA locale, web), Diapason à venir.
+- Liens GitHub et LinkedIn dans la section contact du site.
+
+### Modifié
+
+- README du profil : « 75+ releases », fcx-toolkit retiré (dépôt devenu privé).
+- `DEPLOY.md` : vrai déploiement, fichier par fichier, avec un alias SSH, sans `--delete` ; vérification après
+  déploiement ; bloc nginx qui refuse les fichiers cachés.
+
+### Sécurité
+
+- Le dossier servi par mawena.cloud ne contient plus que le site et le dépôt APT : le `.git` et des fichiers privés
+  qui s'y trouvaient ont été déplacés hors du web.
+
 ## [1.1.0] - 2026-11-14
 
 ### Ajouté
@@ -62,6 +82,7 @@ Première version publiée.
   hors service, sont remplacées.
 - Le lien « Maravel » pointait vers le profil au lieu du dépôt `mawena/maravel`.
 
-[Non publié]: https://github.com/mawena/mawena/compare/v1.1.0...develop
+[Non publié]: https://github.com/mawena/mawena/compare/v1.2.0...develop
+[1.2.0]: https://github.com/mawena/mawena/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/mawena/mawena/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mawena/mawena/releases/tag/v1.0.0

@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mawena — Charles GAMLIGO · Développeur Fullstack Laravel & Vue.js</title>
+  <title>Mawena — Charles GAMLIGO · Développeur fullstack &amp; Linux, Laravel, Vue.js, .deb et APT</title>
   <meta name="description"
-    content="Mawena (Charles GAMLIGO), développeur fullstack Laravel & Vue.js à Lomé, Togo. Je conçois des applications web sur mesure, des API REST robustes et des back-offices qui font avancer votre business.">
+    content="Mawena (Charles GAMLIGO), développeur fullstack &amp; Linux à Lomé, Togo : plateformes métier Laravel et Vue.js, applications Ubuntu en paquets .deb et dépôts APT signés, mobile Flutter et Kotlin, outils Rust et Python, IA locale. Ouvert aux postes à distance et aux missions freelance.">
   <meta name="author" content="Charles GAMLIGO">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://mawena.cloud/">
@@ -15,13 +15,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Mawena">
   <meta property="og:url" content="https://mawena.cloud/">
-  <meta property="og:title" content="Mawena — Développeur Fullstack Laravel & Vue.js">
+  <meta property="og:title" content="Mawena — Développeur fullstack &amp; Linux · à distance et freelance">
   <meta property="og:description"
-    content="Applications web sur mesure, API REST et back-offices. Discutons de votre projet.">
+    content="Laravel et Vue.js, applications Ubuntu en .deb avec dépôts APT signés, Flutter, Rust, IA locale. Plus de 75 releases en 2026. Ouvert aux postes à distance et aux missions freelance.">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mawena — Développeur Fullstack Laravel & Vue.js">
-  <meta name="twitter:description" content="Applications web sur mesure, API REST et back-offices. Discutons de votre projet.">
+  <meta name="twitter:title" content="Mawena — Développeur fullstack &amp; Linux · à distance et freelance">
+  <meta name="twitter:description" content="Laravel et Vue.js, applications Ubuntu en .deb avec dépôts APT signés, Flutter, Rust, IA locale. Ouvert aux postes à distance et aux missions freelance.">
 
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1120'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%2322C55E' text-anchor='middle'%3Em%3C/text%3E%3C/svg%3E">
@@ -44,13 +44,13 @@
         "url": "https://mawena.cloud",
         "email": "mailto:gamligocharles@gmail.com",
         "telephone": "+22898676615",
-        "jobTitle": "Développeur Fullstack Laravel & Vue.js",
-        "description": "Mawena (Charles GAMLIGO), développeur fullstack Laravel & Vue.js basé à Lomé, Togo. Applications web sur mesure, API REST et back-offices.",
+        "jobTitle": "Développeur fullstack & Linux",
+        "description": "Mawena (Charles GAMLIGO), développeur fullstack & Linux basé à Lomé, Togo. Plateformes métier Laravel et Vue.js, paquets .deb et dépôts APT signés, Flutter, Rust, Python, IA locale. Ouvert aux postes à distance et aux missions freelance.",
         "nationality": "Togolaise",
         "address": { "@type": "PostalAddress", "addressLocality": "Lomé", "addressCountry": "TG" },
-        "knowsAbout": ["Laravel", "PHP", "Vue.js", "Vuetify", "MySQL", "Redis", "API REST", "Docker", "Nginx"],
+        "knowsAbout": ["Laravel", "PHP", "Vue.js", "Vuetify", "MariaDB", "PostgreSQL", "Redis", "API REST", "Docker", "Nginx", "Linux", "Ubuntu", "Paquets Debian", "Dépôts APT", "Rust", "Python", "Flutter", "Kotlin", "IA locale"],
         "knowsLanguage": ["fr", "en"],
-        "sameAs": []
+        "sameAs": ["https://github.com/mawena", "https://www.linkedin.com/in/charles-gamligo-54a339187"]
       },
       {
         "@type": "WebSite",
@@ -680,6 +680,113 @@
       color: var(--text-mute);
     }
 
+    /* ---------- Chiffres clés & liens projets ---------- */
+    .figures {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin-bottom: 44px;
+    }
+
+    .figure {
+      padding: 22px 26px;
+      border-left: 1px solid var(--border);
+    }
+
+    .figure:first-child {
+      border-left: 0;
+    }
+
+    .figure strong {
+      display: block;
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--accent);
+    }
+
+    .figure span {
+      color: var(--text-soft);
+      font-size: 0.88rem;
+    }
+
+    .figure a {
+      color: var(--text);
+      border-bottom: 1px solid var(--accent-border);
+    }
+
+    .figure a:hover {
+      color: var(--accent);
+    }
+
+    .group-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 64px 0 8px;
+    }
+
+    .group-title.first {
+      margin-top: 0;
+    }
+
+    .group-intro {
+      color: var(--text-mute);
+      font-size: 0.92rem;
+      max-width: 640px;
+      margin-bottom: 26px;
+    }
+
+    .sub-title {
+      font-size: 0.95rem;
+      font-weight: 650;
+      color: var(--text-soft);
+      margin: 30px 0 14px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .links a {
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent-border);
+    }
+
+    .links a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .project h3 a:hover,
+    .tech-card h4 a:hover {
+      color: var(--accent);
+    }
+
+    .tech-card .links {
+      font-size: 0.82rem;
+    }
+
+    .tech-card.soon {
+      border-style: dashed;
+    }
+
+    .stack-item span {
+      line-height: 1.35;
+    }
+
+    code {
+      font-family: var(--mono);
+      font-size: 0.88em;
+      color: var(--accent);
+    }
+
     /* ---------- Stack ---------- */
     .stack-grid {
       display: grid;
@@ -878,6 +985,19 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .figures {
+        grid-template-columns: 1fr;
+      }
+
+      .figure {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .figure:first-child {
+        border-top: 0;
+      }
+
       .stack-grid,
       .tech-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -980,7 +1100,7 @@
           <li><a href="#projets">Projets</a></li>
           <li><a href="#stack">Stack</a></li>
           <li><a href="#methode">Méthode</a></li>
-          <li><a href="#contact" class="nav-cta">Discutons →</a></li>
+          <li><a href="#contact" class="nav-cta">Me contacter →</a></li>
         </ul>
       </nav>
     </div>
@@ -991,16 +1111,18 @@
     <section class="hero" aria-label="Présentation">
       <div class="container hero-grid">
         <div>
-          <span class="badge"><span class="pulse" aria-hidden="true"></span> Disponible pour de nouveaux projets</span>
-          <h1>Des applications web qui font <span class="accent">avancer votre business</span>.</h1>
+          <span class="badge"><span class="pulse" aria-hidden="true"></span> Ouvert aux postes à distance et aux missions freelance</span>
+          <h1>Des plateformes web et des applications Linux <span class="accent">livrées jusqu'à la mise à jour</span>.</h1>
           <p class="hero-sub">
-            Je suis <strong>Charles GAMLIGO</strong>, alias <strong>Mawena</strong> — développeur fullstack
-            <strong>Laravel &amp; Vue.js</strong> basé à Lomé, Togo. Je transforme vos idées en plateformes
-            web fiables : SaaS, API, back-offices et outils métier, du cahier des charges à la mise en production.
+            Je suis <strong>Charles GAMLIGO</strong>, alias <strong>Mawena</strong>, développeur
+            <strong>fullstack &amp; Linux</strong> à Lomé, Togo. <strong>Laravel &amp; Vue.js</strong> pour vos
+            plateformes métier, <strong>paquets .deb et dépôts APT signés</strong> pour Ubuntu, Flutter et Kotlin pour
+            le mobile, Rust et Python pour les outils système, IA locale : du cahier des charges à la version
+            que vos utilisateurs installent et mettent à jour.
           </p>
           <div class="btn-row">
             <a href="#contact" class="btn btn-primary">
-              Discutons de votre projet
+              Discutons de votre projet ou de votre poste
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12" />
@@ -1016,7 +1138,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              Lomé, Togo · Remote friendly
+              Lomé, Togo (UTC+0), journée en phase avec l'Europe
             </span>
             <span>
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1024,7 +1146,7 @@
                 <polyline points="16 18 22 12 16 6" />
                 <polyline points="8 6 2 12 8 18" />
               </svg>
-              Auteur de la librairie open-source Maravel
+              Français &amp; anglais · auteur de la librairie Maravel
             </span>
           </div>
         </div>
@@ -1032,13 +1154,14 @@
         <div class="terminal" aria-hidden="true">
           <div class="terminal-bar"><i></i><i></i><i></i><span>mawena@cloud — zsh</span></div>
           <div class="terminal-body">
-            <div><span class="t-prompt">➜</span> <span class="t-cmd">php artisan mawena:about</span></div>
-            <div class="t-out">Chargement du profil…</div>
+            <div><span class="t-prompt">➜</span> <span class="t-cmd">apt policy gagarine</span></div>
+            <div class="t-out">Candidat : version signée par le dépôt du projet</div>
             <div><span class="t-key">"nom"</span>: <span class="t-str">"Charles GAMLIGO"</span>,</div>
-            <div><span class="t-key">"pseudo"</span>: <span class="t-str">"mawena"</span>,</div>
-            <div><span class="t-key">"stack"</span>: <span class="t-str">"Laravel · Vue 3 · MySQL · Redis"</span>,</div>
-            <div><span class="t-key">"open_source"</span>: <span class="t-str">"maravel v4"</span>,</div>
-            <div><span class="t-key">"mission"</span>: <span class="t-str">"livrer vite, livrer solide"</span></div>
+            <div><span class="t-key">"web"</span>: <span class="t-str">"Laravel · Vue 3"</span>,</div>
+            <div><span class="t-key">"linux"</span>: <span class="t-str">".deb · dépôts APT signés"</span>,</div>
+            <div><span class="t-key">"systeme"</span>: <span class="t-str">"Rust · Python · Flutter"</span>,</div>
+            <div><span class="t-key">"releases_2026"</span>: <span class="t-str">"75+"</span>,</div>
+            <div><span class="t-key">"statut"</span>: <span class="t-str">"ouvert, à distance"</span></div>
             <div><span class="t-prompt">➜</span> <span class="t-cursor"></span></div>
           </div>
         </div>
@@ -1051,7 +1174,8 @@
         <div class="section-head reveal">
           <span class="kicker">// Services</span>
           <h2>Ce que je peux construire pour vous</h2>
-          <p>Un besoin métier, une idée de produit ou un processus à automatiser ? Voici comment je vous aide.</p>
+          <p>Un besoin métier, un produit à lancer, un outil Linux à distribuer ou une équipe à renforcer ? Voici
+            comment je vous aide, en mission freelance ou en poste à distance.</p>
         </div>
         <div class="cards">
           <div class="card reveal">
@@ -1062,9 +1186,9 @@
                 <line x1="12" y1="17" x2="12" y2="21" />
               </svg>
             </div>
-            <h3>Applications web sur mesure</h3>
-            <p>SaaS, plateformes métier, marketplaces : des applications complètes pensées pour vos utilisateurs,
-              développées avec Laravel et Vue 3.</p>
+            <h3>Plateformes métier sur mesure</h3>
+            <p>SaaS, back-offices, tableaux de bord, outils internes : des applications complètes en Laravel et Vue 3,
+              avec rôles et permissions, temps réel et exports (PDF, Word, Excel).</p>
           </div>
           <div class="card reveal">
             <div class="card-icon">
@@ -1074,21 +1198,52 @@
               </svg>
             </div>
             <h3>API REST robustes</h3>
-            <p>Conception d'API sécurisées et documentées : authentification, rôles &amp; permissions, filtres avancés.
-              Le cœur de métier de ma librairie Maravel.</p>
+            <p>Conception d'API sécurisées : authentification, rôles &amp; permissions, filtres avancés, pagination.
+              Le cœur de métier de ma librairie Maravel, publiée sur Packagist.</p>
           </div>
           <div class="card reveal">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="7" height="9" rx="1" />
-                <rect x="14" y="3" width="7" height="5" rx="1" />
-                <rect x="14" y="12" width="7" height="9" rx="1" />
-                <rect x="3" y="16" width="7" height="5" rx="1" />
+                <path d="M21 8 12 3 3 8v8l9 5 9-5V8z" /><path d="m3 8 9 5 9-5" /><path d="M12 13v8" />
               </svg>
             </div>
-            <h3>Back-offices &amp; dashboards</h3>
-            <p>Interfaces d'administration claires et efficaces (Vuetify) : gestion d'utilisateurs, statistiques,
-              contenus — vous gardez le contrôle de votre produit.</p>
+            <h3>Applications Ubuntu en .deb et dépôt APT</h3>
+            <p>Votre programme, service ou application de bureau livré en paquet Debian, avec un dépôt APT signé :
+              vos utilisateurs installent, puis reçoivent chaque version par <code>apt upgrade</code>.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="2" width="12" height="20" rx="3" />
+                <line x1="11" y1="18" x2="13" y2="18" />
+              </svg>
+            </div>
+            <h3>Mobile Flutter &amp; Kotlin</h3>
+            <p>Applications Android soignées, avec du code natif quand il le faut : mon gestionnaire de fichiers
+              Portail embarque un moteur C11 derrière JNI et dépasse 600 commits.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5" />
+                <line x1="12" y1="19" x2="20" y2="19" />
+              </svg>
+            </div>
+            <h3>Outils système en Rust &amp; Python</h3>
+            <p>Services systemd, cgroups, outils en ligne de commande, clients graphiques GTK : des programmes
+              fiables, testés et documentés, du garde-RAM aux systèmes de fichiers.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+                <path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2" />
+              </svg>
+            </div>
+            <h3>IA locale &amp; agents de code</h3>
+            <p>LLM déployés sur vos serveurs (Ollama, vLLM), assistants vocaux, reconnaissance de la parole : des
+              données qui restent chez vous. Je travaille chaque jour avec des agents de code.</p>
           </div>
           <div class="card reveal">
             <div class="card-icon">
@@ -1104,8 +1259,8 @@
               </svg>
             </div>
             <h3>Automatisation de processus</h3>
-            <p>Génération de documents en masse, traitements asynchrones, files d'attente Redis : je remplace vos tâches
-              manuelles répétitives par du code fiable.</p>
+            <p>Génération de documents en masse, traitements asynchrones, files d'attente Redis : je remplace vos
+              tâches manuelles répétitives par du code fiable.</p>
           </div>
           <div class="card reveal">
             <div class="card-icon">
@@ -1116,8 +1271,8 @@
               </svg>
             </div>
             <h3>Déploiement &amp; hébergement</h3>
-            <p>Mise en production sur VPS (Nginx, Docker, MySQL, Redis), noms de domaine, HTTPS, sauvegardes : votre
-              application tourne, et elle reste en ligne.</p>
+            <p>Mise en production sur VPS (Nginx, Docker, MariaDB, Redis), noms de domaine, HTTPS Let's Encrypt,
+              sauvegardes : votre application tourne, et elle reste en ligne.</p>
           </div>
           <div class="card reveal">
             <div class="card-icon">
@@ -1127,8 +1282,8 @@
               </svg>
             </div>
             <h3>Maintenance &amp; évolution</h3>
-            <p>Reprise de projets existants, corrections, montées de version Laravel, nouvelles fonctionnalités : je
-              fais vivre votre application dans la durée.</p>
+            <p>Reprise de projets existants, corrections, montées de version Laravel, nouvelles fonctionnalités,
+              versions numérotées avec journal des changements : je fais vivre votre produit dans la durée.</p>
           </div>
         </div>
       </div>
@@ -1140,11 +1295,79 @@
         <div class="section-head reveal">
           <span class="kicker">// Projets</span>
           <h2>Des produits livrés, pas des promesses</h2>
-          <p>Des applications concrètes, menées jusqu'en production. Pour chacune : le problème résolu d'abord,
-            la technique ensuite.</p>
+          <p>Des applications concrètes, menées jusqu'en production : le problème résolu d'abord, la technique
+            ensuite. Chaque projet public a son dépôt, son journal des changements et ses versions numérotées.</p>
         </div>
+
+        <div class="figures reveal">
+          <div class="figure"><strong>75+ releases</strong><span>publiées en 2026, chacune avec son journal des changements</span></div>
+          <div class="figure"><strong>5 dépôts APT signés</strong><span><a href="https://mawena.github.io/CCS/" target="_blank" rel="noopener">CCS</a>, <a href="https://mawena.github.io/gagarine/" target="_blank" rel="noopener">Gagarine</a>, <a href="https://mawena.github.io/Voix-la/" target="_blank" rel="noopener">Voix-là</a>, <a href="https://mawena.github.io/sesame/" target="_blank" rel="noopener">Sésame</a>, plus lnmp et dnsmasq-webui sur mon serveur</span></div>
+          <div class="figure"><strong>Maravel sur Packagist</strong><span>la <a href="https://packagist.org/packages/mawena/maravel" target="_blank" rel="noopener">librairie Laravel</a> à la base de mes applications</span></div>
+        </div>
+
+        <h3 class="group-title first">Projets vedettes</h3>
+        <p class="group-intro">Les réalisations dont je suis le plus fier : des outils installables, à jour, et utilisés au quotidien.</p>
         <div class="projects">
-          <article class="project featured reveal">
+          <article class="project reveal">
+            <div class="project-top">
+              <h3><a href="https://github.com/mawena/CCS" target="_blank" rel="noopener">CCS</a></h3>
+              <span class="project-type">Outil Linux · APT</span>
+            </div>
+            <p>Plusieurs comptes Claude Code sur un PC Linux, utilisés comme un seul : bascule en une commande, prévisions d'usage, bascule automatique avant la coupure, orchestrateur des fenêtres de 5 h. Application GNOME façon VS Code : chat graphique, fichiers du projet, feuille de route, terminal.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">GTK 4 / libadwaita</span><span class="tag">Dépôt APT signé</span></div>
+            <div class="links"><a href="https://github.com/mawena/CCS" target="_blank" rel="noopener">Dépôt GitHub</a><a href="https://mawena.github.io/CCS/" target="_blank" rel="noopener">Site et installation</a></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-top">
+              <h3><a href="https://github.com/mawena/gagarine" target="_blank" rel="noopener">Gagarine</a></h3>
+              <span class="project-type">Outil Linux · APT</span>
+            </div>
+            <p>Garde-RAM pour Linux : il fige le programme qui s'emballe avant que le PC ne gèle, fait passer les travaux lourds dans une file sous limites mémoire du noyau, apprend la RAM réellement prise par chacun, signale les fuites, et fournit un swap compressé, une application GNOME et un indicateur de barre.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">systemd · cgroups · zram</span><span class="tag">Dépôt APT signé</span></div>
+            <div class="links"><a href="https://github.com/mawena/gagarine" target="_blank" rel="noopener">Dépôt GitHub</a><a href="https://mawena.github.io/gagarine/" target="_blank" rel="noopener">Site et installation</a></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-top">
+              <h3><a href="https://github.com/mawena/Portail" target="_blank" rel="noopener">Portail</a></h3>
+              <span class="project-type">Mobile · Android</span>
+            </div>
+            <p>Gestionnaire de fichiers Android qui ouvre sans root les disques USB chiffrés LUKS2 et les clés ext4, FAT, exFAT et NTFS, en lecture et en écriture. Moteur natif C11 derrière JNI, onglets, SFTP/SSH, coffres chiffrés, analyseur de stockage. Les écritures sont vérifiées par e2fsck et le noyau Linux. Mon plus gros projet : plus de 600 commits.</p>
+            <div class="tags"><span class="tag">Flutter</span><span class="tag">Kotlin</span><span class="tag">C11</span><span class="tag">APK à chaque release</span></div>
+            <div class="links"><a href="https://github.com/mawena/Portail" target="_blank" rel="noopener">Dépôt GitHub</a></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-top">
+              <h3><a href="https://github.com/mawena/Voix-la" target="_blank" rel="noopener">Voix-là</a></h3>
+              <span class="project-type">IA · Linux · APT</span>
+            </div>
+            <p>Doublez une vidéo ou une chanson avec une voix clonée (la vôtre, ou celle d'une personne d'accord) : voix séparée, nettoyée et convertie sur un GPU gratuit (Kaggle, Modal ou Runpod), chanson transposée dans votre tessiture, une voix par chanteur, paroles traduites, karaoké. Application GNOME.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Seed-VC · Whisper</span><span class="tag">Dépôt APT signé</span></div>
+            <div class="links"><a href="https://github.com/mawena/Voix-la" target="_blank" rel="noopener">Dépôt GitHub</a><a href="https://mawena.github.io/Voix-la/" target="_blank" rel="noopener">Site et installation</a></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-top">
+              <h3><a href="https://github.com/mawena/Canape" target="_blank" rel="noopener">Canapé</a></h3>
+              <span class="project-type">Web temps réel</span>
+            </div>
+            <p>Regarder un film à deux ou à plusieurs, chacun chez soi, en se voyant et en s'entendant. Pas de partage d'écran : chaque navigateur lit le film depuis le serveur, la lecture reste synchronisée, et caméras et micros passent en pair à pair (WebRTC). Auto-hébergé, en production.</p>
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">WebRTC</span><span class="tag">nginx</span></div>
+            <div class="links"><a href="https://github.com/mawena/Canape" target="_blank" rel="noopener">Dépôt GitHub</a></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-top">
+              <h3><a href="https://github.com/mawena/maravel" target="_blank" rel="noopener">Maravel</a></h3>
+              <span class="project-type">Librairie Laravel</span>
+            </div>
+            <p>Bibliothèque Laravel pour bâtir vite des API REST : contrôleur CRUD générique, filtres, tri et pagination, rôles et permissions en base (compatibles CASL), policies automatiques, générateurs Artisan. Elle fait tourner Pulse, maravel-xy et loan.</p>
+            <div class="tags"><span class="tag">PHP 8.1+</span><span class="tag">Laravel 10 à 13</span><span class="tag">Packagist</span></div>
+            <div class="links"><a href="https://github.com/mawena/maravel" target="_blank" rel="noopener">Dépôt GitHub</a><a href="https://packagist.org/packages/mawena/maravel" target="_blank" rel="noopener">Packagist</a></div>
+          </article>
+        </div>
+
+        <h3 class="group-title">Plateformes web livrées</h3>
+        <p class="group-intro">Des produits Laravel et Vue menés du cahier des charges à la mise en ligne.</p>
+        <div class="projects">
+          <article class="project reveal">
             <div class="project-top">
               <h3>Mawdoc</h3>
               <span class="project-type">Automatisation métier</span>
@@ -1164,7 +1387,7 @@
 
           <article class="project reveal">
             <div class="project-top">
-              <h3><a href="https://ouork.mawena.cloud" target="_blank" rel="noopener">OuOrk</a></h3>
+              <h3>OuOrk</h3>
               <span class="project-type">Plateforme complète</span>
             </div>
             <p>
@@ -1196,22 +1419,6 @@
 
           <article class="project reveal">
             <div class="project-top">
-              <h3>Simulateur de prêt</h3>
-              <span class="project-type">Outil financier</span>
-            </div>
-            <p>
-              Un outil de simulation de crédit accessible à tous : capacité d'emprunt, comparateur d'offres,
-              échéanciers détaillés et historique des simulations dans un espace personnel. Un sujet complexe
-              — les mathématiques financières — rendu simple et lisible pour l'utilisateur final.
-            </p>
-            <div class="tags">
-              <span class="tag">Grand public</span><span class="tag">Comparateur</span><span
-                class="tag">Laravel</span><span class="tag">Vue 3</span>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <div class="project-top">
               <h3>PutTg</h3>
               <span class="project-type">Gestion de fichiers</span>
             </div>
@@ -1225,91 +1432,134 @@
                 class="tag">Vuetify</span>
             </div>
           </article>
-
-          <article class="project reveal">
-            <div class="project-top">
-              <h3><a href="https://mawcraft.mawena.cloud" target="_blank" rel="noopener">MawCraft</a></h3>
-              <span class="project-type">Jeu · WebGL</span>
-            </div>
-            <p>
-              Un projet personnel pour repousser mes limites techniques : un mini-Minecraft jouable dans le
-              navigateur — monde 3D infini et multijoueur en temps réel, en Three.js. La preuve que je vais
-              bien au-delà du CRUD quand un projet l'exige. <em>Cliquez pour jouer.</em>
-            </p>
-            <div class="tags">
-              <span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">Temps réel</span><span
-                class="tag">Multijoueur</span>
-            </div>
-          </article>
-
         </div>
 
-        <!-- ---- Sous le capot : projets techniques ---- -->
-        <div class="tech-head reveal" id="labo">
-          <span class="kicker">// Sous le capot</span>
-          <h3>Open source &amp; outillage</h3>
-          <p>La partie immergée de l'iceberg : les librairies et outils que je construis, publie et utilise
-            en production. Si vous parlez couramment le terminal, c'est pour vous.</p>
-        </div>
+        <h3 class="group-title">Applications Linux et outils système</h3>
+        <p class="group-intro">Des programmes que l'on installe avec <code>apt</code> et qui se mettent à jour tout seuls, avec un dépôt signé.</p>
         <div class="tech-grid">
           <article class="tech-card reveal">
             <div class="tech-card-top">
-              <h4><a href="https://github.com/mawena/maravel" target="_blank" rel="noopener">maravel</a></h4>
-              <span class="tech-type">lib Laravel · MIT</span>
+              <h4><a href="https://github.com/mawena/sesame" target="_blank" rel="noopener">Sésame</a></h4>
+              <span class="tech-type">Ubuntu · APT</span>
             </div>
-            <p>APIController générique avec CRUD complet, RBAC dynamique en base, policies auto-câblées,
-              filtres avancés et générateurs Artisan. Laravel 10 → 13, PHP 8.1 → 8.4.</p>
-            <div class="tech-cmd">composer require mawena/maravel</div>
+            <p>Relie un poste Ubuntu Desktop à Microsoft Entra ID comme un PC Windows : adresse pro, mot de passe, validation sur le téléphone et code PIN à l'écran d'accueil. Le compte local est gardé tel quel.</p>
+            <div class="links"><a href="https://github.com/mawena/sesame" target="_blank" rel="noopener">Dépôt GitHub</a><a href="https://mawena.github.io/sesame/" target="_blank" rel="noopener">Site</a></div>
           </article>
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/GiGit" target="_blank" rel="noopener">GiGit</a></h4>
+              <span class="tech-type">Rust · .deb</span>
+            </div>
+            <p>Client git graphique natif et rapide : graphe des commits, indexation par fichier, bloc ou ligne, push forcé sécurisé, interface français et anglais.</p>
+            <div class="links"><a href="https://github.com/mawena/GiGit" target="_blank" rel="noopener">Dépôt GitHub</a></div>
+          </article>
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/lnmp" target="_blank" rel="noopener">lnmp</a></h4>
+              <span class="tech-type">Bash · APT</span>
+            </div>
+            <p>Installe et pilote une pile Nginx, MariaDB, PHP et Certbot sur Ubuntu : en ligne de commande, en menu ou depuis un panneau web. Domaines locaux en HTTPS (mkcert), Let's Encrypt.</p>
+            <div class="tech-cmd">sudo apt install lnmp</div>
+            <div class="links"><a href="https://github.com/mawena/lnmp" target="_blank" rel="noopener">Dépôt GitHub</a><a href="https://lnmp.mawena.cloud" target="_blank" rel="noopener">Site</a></div>
+          </article>
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/dnsmasq-webui" target="_blank" rel="noopener">dnsmasq-webui</a></h4>
+              <span class="tech-type">PHP · APT</span>
+            </div>
+            <p>Transforme une machine Ubuntu en serveur DNS/DHCP de réseau local avec panneau web et filtrage de domaines façon Pi-hole. Le serveur web ne tourne jamais en root : un wrapper minimal valide et applique la configuration.</p>
+            <div class="tech-cmd">sudo apt install dnsmasq-webui</div>
+            <div class="links"><a href="https://github.com/mawena/dnsmasq-webui" target="_blank" rel="noopener">Dépôt GitHub</a></div>
+          </article>
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/dada" target="_blank" rel="noopener">dada</a></h4>
+              <span class="tech-type">Rust · FUSE</span>
+            </div>
+            <p>Système de fichiers portable pour clés USB et disques externes, en lecture et écriture sous Linux, macOS et Windows : format spécifié, journal des métadonnées, CRC32C, outils de vérification et de réparation.</p>
+            <div class="links"><a href="https://github.com/mawena/dada" target="_blank" rel="noopener">Dépôt GitHub</a></div>
+          </article>
+        </div>
 
+        <h3 class="group-title">IA locale et auto-hébergée</h3>
+        <p class="group-intro">Des modèles qui tournent chez vous, sur votre machine ou vos serveurs.</p>
+        <div class="tech-grid">
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/Jarvis" target="_blank" rel="noopener">Jarvis</a></h4>
+              <span class="tech-type">Rust · IA locale</span>
+            </div>
+            <p>Assistant vocal en français pour Linux : reconnaissance de la parole (Whisper), vérification de la voix et synthèse sur le PC, IA locale Qwen3.5 via LM Studio ou Claude en option. Pilote la musique, les applications et le web, avec des oreilles en réseau, Android compris.</p>
+            <div class="links"><a href="https://github.com/mawena/Jarvis" target="_blank" rel="noopener">Dépôt GitHub</a></div>
+          </article>
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/Atelier" target="_blank" rel="noopener">Atelier</a></h4>
+              <span class="tech-type">Rust · Docker</span>
+            </div>
+            <p>Déploie des LLM open source sur vos serveurs derrière une API compatible OpenAI sécurisée par clés. Un seul binaire Rust installe et pilote Ollama ou vLLM, LiteLLM, PostgreSQL et Caddy.</p>
+            <div class="links"><a href="https://github.com/mawena/Atelier" target="_blank" rel="noopener">Dépôt GitHub</a></div>
+          </article>
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/Jideo" target="_blank" rel="noopener">Jideo</a></h4>
+              <span class="tech-type">FastAPI · Vue 3</span>
+            </div>
+            <p>Échange de visages sur photos et vidéos, 100 % local et sur CPU : aucune donnée ne quitte la machine. Interface web, avant/après, filigrane et métadonnée « généré par IA ».</p>
+            <div class="links"><a href="https://github.com/mawena/Jideo" target="_blank" rel="noopener">Dépôt GitHub</a></div>
+          </article>
+        </div>
+
+        <h3 class="group-title">Web, outils et expériences</h3>
+        <p class="group-intro">Des applications Laravel et Vue, des outils d'hébergement et un jeu pour le plaisir.</p>
+        <div class="tech-grid">
+          <article class="tech-card reveal">
+            <div class="tech-card-top">
+              <h4><a href="https://github.com/mawena/pulse" target="_blank" rel="noopener">Pulse</a></h4>
+              <span class="tech-type">Laravel · Vue</span>
+            </div>
+            <p>Cockpit de supervision en direct de VPS Ubuntu : CPU, RAM, disques et réseau par WebSocket (Reverb), processus, services systemd, rôles et journal d'audit.</p>
+            <div class="links"><a href="https://github.com/mawena/pulse" target="_blank" rel="noopener">Dépôt GitHub</a><a href="https://pulse.mawena.cloud" target="_blank" rel="noopener">Démo en ligne</a></div>
+          </article>
           <article class="tech-card reveal">
             <div class="tech-card-top">
               <h4><a href="https://github.com/mawena/maravel-xy" target="_blank" rel="noopener">maravel-xy</a></h4>
-              <span class="tech-type">starter kit · MIT</span>
+              <span class="tech-type">Starter kit</span>
             </div>
-            <p>Template Laravel 12 + Vue 3/Vuetify : Sanctum, CRUD utilisateurs, rôles &amp; permissions
-              via Maravel. Le point de départ de mes projets — jours, pas semaines.</p>
-            <div class="tech-cmd">git clone github.com/mawena/maravel-xy</div>
+            <p>Modèle de démarrage Laravel 12 + Vue 3 (Vuetify) : authentification Sanctum, rôles et permissions partagés entre l'API et l'interface par CASL, tableaux et formulaires générés, en français, anglais et arabe.</p>
+            <div class="links"><a href="https://github.com/mawena/maravel-xy" target="_blank" rel="noopener">Dépôt GitHub</a></div>
           </article>
-
           <article class="tech-card reveal">
             <div class="tech-card-top">
-              <h4>lnmp</h4>
-              <span class="tech-type">Bash · Ubuntu</span>
+              <h4><a href="https://github.com/mawena/loan" target="_blank" rel="noopener">loan</a></h4>
+              <span class="tech-type">Laravel · Vue</span>
             </div>
-            <p>Gestionnaire de pile web complet — Nginx, MariaDB, PHP, SSL (Let's Encrypt / mkcert) — en CLI,
-              menu interactif ou panneau web. Distribué via un dépôt APT signé.</p>
-            <div class="tech-cmd">sudo apt install lnmp</div>
+            <p>Simulateur de crédit en FCFA : trois méthodes d'amortissement, comparateur d'offres, remboursement anticipé, capacité d'emprunt, exports PDF, Word et Excel, partage par lien.</p>
+            <div class="links"><a href="https://github.com/mawena/loan" target="_blank" rel="noopener">Dépôt GitHub</a></div>
           </article>
-
           <article class="tech-card reveal">
             <div class="tech-card-top">
-              <h4>dnsmasq-webui</h4>
-              <span class="tech-type">paquet Debian</span>
+              <h4><a href="https://github.com/mawena/immich" target="_blank" rel="noopener">immich</a></h4>
+              <span class="tech-type">Bash · Docker</span>
             </div>
-            <p>Serveur DNS/DHCP de réseau local avec interface web : enregistrements locaux, réservations
-              DHCP, filtrage de domaines façon Pi-hole. MySQL comme source de vérité.</p>
-            <div class="tech-cmd">sudo apt install dnsmasq-webui</div>
+            <p>Pilote en une commande une instance Immich auto-hébergée : mises à jour sûres avec sauvegarde de la base, restauration, bibliothèques externes. Un script Bash, sans dépendance.</p>
+            <div class="links"><a href="https://github.com/mawena/immich" target="_blank" rel="noopener">Dépôt GitHub</a></div>
           </article>
-
           <article class="tech-card reveal">
             <div class="tech-card-top">
-              <h4>amazon-mcp</h4>
-              <span class="tech-type">MCP · Python</span>
+              <h4><a href="https://github.com/mawena/MawCraft" target="_blank" rel="noopener">MawCraft</a></h4>
+              <span class="tech-type">Jeu · Three.js</span>
             </div>
-            <p>Serveur MCP qui donne à Claude le suivi des prix Amazon : scraping en cascade
-              (requests → curl_cffi → Playwright), historique SQLite, relevés automatiques toutes les 6 h.</p>
-            <div class="tech-cmd">python -m amazon_mcp.server</div>
+            <p>Mini-jeu de construction voxel dans le navigateur, sur PC comme sur mobile : monde infini généré par graine, commandes tactiles, multijoueur en temps réel. Un seul fichier HTML, sans build.</p>
+            <div class="links"><a href="https://github.com/mawena/MawCraft" target="_blank" rel="noopener">Dépôt GitHub</a></div>
           </article>
-
-          <article class="tech-card reveal">
+          <article class="tech-card reveal soon">
             <div class="tech-card-top">
-              <h4>fcx-toolkit</h4>
-              <span class="tech-type">CLI · banking</span>
+              <h4><a href="https://github.com/mawena/Diapason" target="_blank" rel="noopener">Diapason</a></h4>
+              <span class="tech-type">À venir · Ubuntu</span>
             </div>
-            <p>CLI Python pour Oracle Flexcube (core banking) : exécution SQL, exports, intégration de batchs
-              comptables depuis CSV/Excel. Sortie JSON unique, faite pour être scriptée.</p>
-            <div class="tech-cmd">fcx.py commands --json</div>
+            <p>Application Ubuntu qui reconnaît la sortie audio (casque, enceinte Bluetooth, haut-parleurs, HDMI) et applique toute seule les réglages qui la font le mieux sonner. Paquet .deb et dépôt APT dès la première version.</p>
+            <div class="links"><a href="https://github.com/mawena/Diapason" target="_blank" rel="noopener">Dépôt GitHub</a></div>
           </article>
         </div>
       </div>
@@ -1324,47 +1574,18 @@
           <p>Chaque techno ci-dessous est utilisée en production dans mes projets.</p>
         </div>
         <div class="stack-grid">
-          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg><span>Laravel 10 → 13<small>PHP 8.1 → 8.4</small></span></div>
-          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M12 19l7-11H5l7 11z" />
-              <path d="M12 19L2 4h4l6 9 6-9h4L12 19z" />
-            </svg><span>Vue 3 · Pinia<small>Composition API</small></span></div>
-          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="3" />
-              <path d="M8 8h8M8 12h8M8 16h5" />
-            </svg><span>Vuetify · Tailwind<small>UI moderne</small></span></div>
-          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <ellipse cx="12" cy="5" rx="9" ry="3" />
-              <path d="M3 5v14a9 3 0 0 0 18 0V5" />
-              <path d="M3 12a9 3 0 0 0 18 0" />
-            </svg><span>MySQL<small>Modélisation &amp; perfs</small></span></div>
-          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg><span>Redis · Queues<small>Jobs asynchrones</small></span></div>
-          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <rect x="2" y="8" width="20" height="12" rx="2" />
-              <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" />
-            </svg><span>Docker · Compose<small>Environnements repro</small></span></div>
-          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <path
-                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg><span>Nginx · VPS<small>Déploiement &amp; HTTPS</small></span></div>
-          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-              <polyline points="22 4 12 14.01 9 11.01" />
-            </svg><span>Tests · PHPUnit<small>Qualité livrée</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg><span>Laravel 10 → 13<small>PHP 8.1 → 8.4</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-11H5l7 11z" /><path d="M12 19L2 4h4l6 9 6-9h4L12 19z" /></svg><span>Vue 3 · Pinia<small>Composition API, TypeScript</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M8 8h8M8 12h8M8 16h5" /></svg><span>Vuetify · Tailwind<small>Interfaces modernes</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v14a9 3 0 0 0 18 0V5" /><path d="M3 12a9 3 0 0 0 18 0" /></svg><span>MariaDB · PostgreSQL<small>Modélisation et performances</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" /></svg><span>Redis · Queues<small>Jobs asynchrones</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="12" rx="2" /><path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" /></svg><span>Docker · Compose<small>Environnements reproductibles</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg><span>Nginx · VPS<small>Déploiement, HTTPS Let's Encrypt</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8z" /><path d="m3 8 9 5 9-5" /><path d="M12 13v8" /></svg><span>Debian · APT<small>Paquets .deb, dépôts signés, systemd</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5" /><line x1="12" y1="19" x2="20" y2="19" /></svg><span>Rust<small>Outils système, clients natifs</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg><span>Python · Bash<small>Services, CLI, GTK 4, FastAPI</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3" /><line x1="11" y1="18" x2="13" y2="18" /></svg><span>Flutter · Kotlin<small>Android, C11 via JNI</small></span></div>
+          <div class="stack-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="9" y="9" width="6" height="6" /><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2" /></svg><span>IA locale<small>Whisper, LM Studio, Ollama, vLLM</small></span></div>
         </div>
       </div>
     </section>
@@ -1409,9 +1630,9 @@
       <div class="container">
         <div class="contact-box reveal">
           <span class="kicker">// Contact</span>
-          <h2>Un projet en tête ?<br>Parlons-en dès aujourd'hui.</h2>
-          <p>Décrivez-moi votre besoin en quelques lignes — je vous réponds rapidement avec une première analyse et les
-            prochaines étapes.</p>
+          <h2>Un poste à pourvoir ou un projet en tête ?<br>Parlons-en dès aujourd'hui.</h2>
+          <p>Recruteur, entreprise ou porteur de projet : décrivez-moi votre besoin en quelques lignes. Je suis ouvert
+            aux postes à distance comme aux missions freelance, et je réponds avec une première analyse et les prochaines étapes.</p>
           <div class="contact-links">
             <a class="btn btn-primary"
               href="mailto:gamligocharles@gmail.com?subject=Projet%20web%20—%20prise%20de%20contact">
@@ -1431,6 +1652,22 @@
                   d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
               </svg>
               WhatsApp · +228 91 61 11 35
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/mawena" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              GitHub
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/charles-gamligo-54a339187" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
             </a>
           </div>
           <p class="contact-note">
