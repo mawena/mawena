@@ -7,6 +7,30 @@ Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le d
 
 ## [Non publié]
 
+## [1.1.0] - 2026-11-14
+
+### Ajouté
+
+- Section « 2026 in numbers » : 77 releases publiées en 2026, 5 dépôts APT signés, Maravel sur Packagist,
+  contributions sur 12 mois.
+- Six projets vedettes en cartes, avec leur dernière version en badge : CCS, Gagarine, Portail, Voix-là, Canapé,
+  Maravel.
+- Nouveaux projets : CCS, Gagarine, Sésame, Canapé, Jideo, fcx-toolkit, maravel-xy, loan, immich, Diapason (à venir).
+- Sections « What I bring to a team » et « Work with me » tournées vers les recrutements à distance, les missions et
+  les contributions (feuilles de route publiques).
+- Icônes TypeScript, Node.js et PostgreSQL dans la pile.
+
+### Modifié
+
+- Accroche : développeur fullstack et Linux, ouvert aux postes à distance et aux missions.
+- Projets regroupés en « Linux & desktop », « Local & self-hosted AI » et « Web & business », descriptions alignées
+  sur les nouvelles fiches « About » des dépôts.
+- Cartes de stats régénérées le 14/11/2026.
+
+### Corrigé
+
+- Le lien vers `dbackup`, dépôt privé, menait à une page 404 pour les visiteurs : retiré.
+
 ## [1.0.0] - 2026-11-04
 
 Première version publiée.
@@ -38,5 +62,6 @@ Première version publiée.
   hors service, sont remplacées.
 - Le lien « Maravel » pointait vers le profil au lieu du dépôt `mawena/maravel`.
 
-[Non publié]: https://github.com/mawena/mawena/compare/v1.0.0...develop
+[Non publié]: https://github.com/mawena/mawena/compare/v1.1.0...develop
+[1.1.0]: https://github.com/mawena/mawena/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mawena/mawena/releases/tag/v1.0.0
