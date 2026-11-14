@@ -23,7 +23,7 @@
 
 ### ⚡ 2026 in numbers
 
-- **77 releases** published in 2026 across 9 public projects, each with its changelog and its GitHub release.
+- **75+ releases** published in 2026 across 9 public projects, each with its changelog and its GitHub release.
 - **5 signed APT repositories**: [CCS](https://mawena.github.io/CCS/), [Gagarine](https://mawena.github.io/gagarine/), [Voix-là](https://mawena.github.io/Voix-la/) and [Sésame](https://mawena.github.io/sesame/) on GitHub Pages, plus [lnmp and dnsmasq-webui](https://mawena.cloud/repo/) on my own server. Users get new versions with `apt upgrade`.
 - **1 Laravel library on Packagist**, [Maravel](https://packagist.org/packages/mawena/maravel), the base of my Laravel apps.
 - **4,800+ contributions** over the last 12 months (live cards below).
@@ -120,7 +120,6 @@ Laravel library for REST APIs: generic CRUD controller, filters, sorting and pag
 | [**Pulse**](https://github.com/mawena/pulse) | Live monitoring cockpit for Ubuntu VPS: metrics over WebSocket, processes, systemd services, roles, audit log. [Live demo →](https://pulse.mawena.cloud) | Laravel 13 · Vue 3 · Reverb |
 | [**maravel-xy**](https://github.com/mawena/maravel-xy) | Laravel + Vue starter kit: Sanctum auth, roles and permissions shared by the API and the UI through CASL, generated tables and forms, French, English and Arabic. | Laravel 12 · Vuetify 3 |
 | [**loan**](https://github.com/mawena/loan) | Credit simulator in CFA francs: three amortization methods, offer comparison, early repayment, PDF, Word and Excel exports. | Laravel 12 · Vue 3 |
-| [**fcx-toolkit**](https://github.com/mawena/fcx-toolkit) | Command-line tool for the Oracle FLEXCUBE core banking system: SQL and PL/SQL runs, CSV and Excel exports, accounting batches through the FCUBS API, one JSON output. | Python · Oracle |
 | [**immich**](https://github.com/mawena/immich) | One-command manager for a self-hosted Immich photo server: safe updates with a database backup, restore, external libraries. | Bash · Docker Compose |
 
 **Just for fun:** [**MawCraft**](https://github.com/mawena/MawCraft), a voxel sandbox in the browser with an infinite seeded world, touch controls and multiplayer (Three.js + WebSocket).
@@ -134,7 +133,7 @@ Laravel library for REST APIs: generic CRUD controller, filters, sorting and pag
 - **Linux & DevOps:** Debian packaging, signed APT repositories, systemd services, cgroups, nginx, Docker, Let's Encrypt.
 - **Systems & mobile:** Rust, C11 behind JNI, Flutter and Kotlin on Android.
 - **AI integration:** local LLMs (LM Studio, Ollama, vLLM), Whisper, voice conversion on cloud GPUs, and daily work with AI coding agents.
-- **Business domains:** banking tools (Oracle FLEXCUBE, credit simulation), back-offices and reporting.
+- **Business domains:** banking and fintech (Oracle FLEXCUBE integrations, credit simulation), back-offices and reporting.
 
 ### 📊 By the numbers
 

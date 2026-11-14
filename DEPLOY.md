@@ -6,12 +6,20 @@ Le reste du dépôt ne part pas sur le serveur : `README.md` est le profil GitHu
 
 ## 1. Copier les fichiers sur le serveur
 
+Seuls les fichiers du site partent, nommés un par un. **Jamais de `--delete`** : la racine du site héberge aussi le dépôt
+APT `repo/` (lnmp, dnsmasq-webui), qui n'est pas dans ce dépôt. **Jamais de `git clone` ou de `git pull` dans la racine
+du site** : le dossier `.git` serait servi à tout le monde.
+
 ```bash
-rsync -avz --delete \
-  --exclude .git --exclude .github --exclude scripts \
-  --exclude README.md --exclude ROADMAP.md --exclude DEPLOY.md \
-  --exclude CHANGELOG.md --exclude VERSION \
-  ./ user@mawena.cloud:/var/www/mawena.cloud/
+# SITE_DEST : alias SSH du serveur (~/.ssh/config, qui porte l'hôte et le port) et racine du site, par exemple
+# SITE_DEST=mon-vps:/chemin/vers/mawena.cloud/
+rsync -avz index.html robots.txt sitemap.xml google318bc662f5536e4c.html setup_lnmp.sh "$SITE_DEST"
+```
+
+Après chaque déploiement, vérifier que rien d'autre n'est servi par erreur :
+
+```bash
+for p in .git/HEAD README.md DEPLOY.md; do curl -s -o /dev/null -w "$p %{http_code}\n" https://mawena.cloud/$p; done   # 404 attendu
 ```
 
 ## 2. Config Nginx
@@ -39,6 +47,11 @@ server {
 
     location / {
         try_files $uri $uri/ =404;
+    }
+
+    # Ne jamais servir les fichiers cachés (.git, .env…), sauf la validation Let's Encrypt
+    location ~ /\.(?!well-known) {
+        deny all;
     }
 }
 ```
