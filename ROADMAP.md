@@ -40,4 +40,14 @@ Ce dépôt sert deux choses : le README affiché sur https://github.com/mawena e
 - [ ] Bio et site web du profil : à coller à la main (le jeton `gh` n'a pas le droit `user`)
 - [ ] Épingler six dépôts : CCS, gagarine, Portail, Voix-la, Canape, maravel (pas d'API pour épingler)
 - [ ] Régler la facturation du compte GitHub pour que le workflow des cartes reprenne seul
-- [ ] Mettre le site https://mawena.cloud (`index.html`) au niveau du profil
+- [x] Mettre le site https://mawena.cloud (`index.html`) au niveau du profil (fait en phase 6)
+
+## Phase 6 — Site mawena.cloud et ménage (14/11/2026)
+
+- [x] Site mawena.cloud : positionnement fullstack et Linux, ouvert aux postes à distance et aux missions, nouveaux projets, chiffres clés, liens GitHub et LinkedIn
+- [x] Rendu vérifié sur ordinateur (1366 px) et sur mobile (390 px)
+- [x] Racine web du serveur nettoyée : fichiers privés et `.git` sortis du dossier servi (déplacés, rien de supprimé)
+- [x] `DEPLOY.md` : déploiement fichier par fichier, sans `.git` ni `--delete` (le dépôt APT `repo/` vit à côté du site)
+- [x] fcx-toolkit retiré du profil (dépôt passé en privé)
+- [x] Site déployé et vérifié en ligne
+- [ ] Nginx (root sur le VPS) : refuser les fichiers cachés sur tous les sites, retirer `autoindex on` du site mawena.cloud
